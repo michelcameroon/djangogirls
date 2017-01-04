@@ -1,0 +1,36 @@
+
+<html>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+
+        <div>
+
+
+            <h1><a href="">student list</a></h1>
+            
+            <a href="students/new"> new </a>                    
+
+            <h2> where is the link? </h2>
+       </div>
+
+
+
+
+    {% for students in studentss %}
+
+       <div>           
+
+          <h1><a href="{% url 'students_edit' pk=students.pk %}">{{ students.firstName }}</a
+></h1>
+         
+            <p>{{ students.firstName|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+
+
+
+
+    </body>
+</html>

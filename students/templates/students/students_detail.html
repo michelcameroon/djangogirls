@@ -1,0 +1,14 @@
+#{% extends 'blog/base.html' %}
+
+#{% block content %}
+    <div class="post">
+#        {% if post.published_date %}
+#            <div class="date">
+#                {{ post.published_date }}
+#            </div>
+#        {% endif %}
+        <h1>{{ students.firstName }}</h1>
+        <p>{{ students.lastName|linebreaksbr }}</p>
+    </div>
+    <a href="{% url 'students_list' %}">back to students list </a>
+#{% endblock %}
